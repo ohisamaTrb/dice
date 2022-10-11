@@ -1,53 +1,54 @@
-input.onButtonPressed(Button.A, function on_button_pressed_a() {
-    
-    max2 += -1
-    if (max2 < 1) {
-        max2 += 1
+input.onButtonPressed(Button.A, function () {
+    max += -1
+    if (max < 1) {
+        max += 1
     }
-    
-    basic.showNumber(max2)
+    basic.showNumber(max)
 })
-input.onGesture(Gesture.Shake, function on_gesture_shake() {
+input.onGesture(Gesture.Shake, function () {
     showResult()
 })
-input.onButtonPressed(Button.B, function on_button_pressed_b() {
-    
-    max2 += 1
-    basic.showNumber(max2)
+input.onButtonPressed(Button.B, function () {
+    max += 1
+    basic.showNumber(max)
 })
-function showResult() {
-    
-    random = randint(1, max2)
-    basic.showLeds(`
-        . . . . .
-                . . . . .
-                . . # . .
-                . . . . .
-                . . . . .
-    `)
-    basic.showIcon(IconNames.SmallDiamond)
-    basic.showIcon(IconNames.Diamond)
-    basic.showLeds(`
-        . # # # .
-                # . . . #
-                # . . . #
-                # . . . #
-                . # # # .
-    `)
-    basic.showLeds(`
-        # # # # #
-                # . . . #
-                # . . . #
-                # . . . #
-                # # # # #
-    `)
+function showResult () {
+    random = randint(1, max)
+    for (let image of animation) {
+        image.showImage(0)
+    }
     basic.showNumber(random)
 }
-
-input.onLogoEvent(TouchButtonEvent.Pressed, function on_logo_pressed() {
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     showResult()
 })
-let max2 = 0
+let animation: Image[] = []
+let max = 0
 let random = 0
 random = 0
-max2 = 6
+max = 6
+animation = [
+images.createImage(`
+    . . . . .
+    . . . . .
+    . . # . .
+    . . . . .
+    . . . . .
+    `),
+images.iconImage(IconNames.SmallDiamond),
+images.iconImage(IconNames.Diamond),
+images.createImage(`
+    . # # # .
+    # . . . #
+    # . . . #
+    # . . . #
+    . # # # .
+    `),
+images.createImage(`
+    # # # # #
+    # . . . #
+    # . . . #
+    # . . . #
+    # # # # #
+    `)
+]
