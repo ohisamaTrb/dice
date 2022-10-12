@@ -58,5 +58,12 @@ images.createImage(`
     # . . . #
     # . . . #
     # # # # #
+    `),
+images.createImage(`
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
     `)
 ]
