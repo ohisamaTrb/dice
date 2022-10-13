@@ -1,3 +1,6 @@
+def check():
+    print("hello,world!")
+
 def on_button_pressed_a():
     global maxNo
     maxNo += -1
@@ -38,6 +41,7 @@ random = 0
 random = 0
 maxNo = 6
 roll = False
+check()
 animation = [images.create_image("""
         . . . . .
             . . . . .
