@@ -1,9 +1,9 @@
 def on_button_pressed_a():
-    global max2
-    max2 += -1
-    if max2 < 1:
-        max2 += 1
-    basic.show_number(max2)
+    global maxNo
+    maxNo += -1
+    if maxNo < 1:
+        maxNo += 1
+    basic.show_number(maxNo)
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
 def on_gesture_shake():
@@ -12,15 +12,15 @@ def on_gesture_shake():
 input.on_gesture(Gesture.SHAKE, on_gesture_shake)
 
 def on_button_pressed_b():
-    global max2
-    max2 += 1
-    basic.show_number(max2)
+    global maxNo
+    maxNo += 1
+    basic.show_number(maxNo)
 input.on_button_pressed(Button.B, on_button_pressed_b)
 
 def showResult():
     global roll, random
     roll = True
-    random = randint(1, max2)
+    random = randint(1, maxNo)
     for image in animation:
         image.show_image(0)
     basic.show_number(random)
@@ -33,10 +33,10 @@ input.on_logo_event(TouchButtonEvent.PRESSED, on_logo_pressed)
 
 animation: List[Image] = []
 roll = False
-max2 = 0
+maxNo = 0
 random = 0
 random = 0
-max2 = 6
+maxNo = 6
 roll = False
 animation = [images.create_image("""
         . . . . .
@@ -60,4 +60,11 @@ animation = [images.create_image("""
             # . . . #
             # . . . #
             # # # # #
+    """),
+    images.create_image("""
+        . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
     """)]

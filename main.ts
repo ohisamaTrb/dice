@@ -1,9 +1,9 @@
 input.onButtonPressed(Button.A, function () {
-    max += -1
-    if (max < 1) {
-        max += 1
+    maxNo += -1
+    if (maxNo < 1) {
+        maxNo += 1
     }
-    basic.showNumber(max)
+    basic.showNumber(maxNo)
 })
 input.onGesture(Gesture.Shake, function () {
     if (roll == false) {
@@ -11,12 +11,12 @@ input.onGesture(Gesture.Shake, function () {
     }
 })
 input.onButtonPressed(Button.B, function () {
-    max += 1
-    basic.showNumber(max)
+    maxNo += 1
+    basic.showNumber(maxNo)
 })
 function showResult () {
     roll = true
-    random = randint(1, max)
+    random = randint(1, maxNo)
     for (let image of animation) {
         image.showImage(0)
     }
@@ -30,10 +30,10 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 })
 let animation: Image[] = []
 let roll = false
-let max = 0
+let maxNo = 0
 let random = 0
 random = 0
-max = 6
+maxNo = 6
 roll = false
 animation = [
 images.createImage(`
