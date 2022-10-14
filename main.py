@@ -15,7 +15,7 @@ input.on_gesture(Gesture.SHAKE, on_gesture_shake)
 def on_button_pressed_b():
     global maxNo
     maxNo += 1
-    print("maxNo:" + ("" + str(maxNo)))
+    print("maxNo:" + str(maxNo))
     basic.show_number(maxNo)
 input.on_button_pressed(Button.B, on_button_pressed_b)
 

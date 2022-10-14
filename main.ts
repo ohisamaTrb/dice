@@ -17,7 +17,7 @@ input.onGesture(Gesture.Shake, function on_gesture_shake() {
 input.onButtonPressed(Button.B, function on_button_pressed_b() {
     
     maxNo += 1
-    console.log("maxNo:" + ("" + ("" + maxNo)))
+    console.log("maxNo:" + ("" + maxNo))
     basic.showNumber(maxNo)
 })
 function showResult() {
@@ -28,7 +28,7 @@ function showResult() {
         image.showImage(0)
     }
     basic.showNumber(random)
-    console.log("roll:" + ("" + random))
+    console.log("roll:" + ("" + ("" + random)))
     roll = false
 }
 
