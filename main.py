@@ -26,7 +26,7 @@ def showResult():
     for image in animation:
         image.show_image(0)
     basic.show_number(random)
-    print("roll:" + str(random))
+    print("roll:" + ("" + str(random)))
     roll = False
 
 def on_logo_pressed():
