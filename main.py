@@ -3,7 +3,7 @@ def on_button_pressed_a():
     maxNo += -1
     if maxNo < 1:
         maxNo += 1
-    print("maxNo:" + ("" + str(maxNo)))
+    print("maxNo:" + str(maxNo))
     basic.show_number(maxNo)
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
@@ -26,7 +26,7 @@ def showResult():
     for image in animation:
         image.show_image(0)
     basic.show_number(random)
-    print("roll:" + ("" + str(random)))
+    print("roll:" + str(random))
     roll = False
 
 def on_logo_pressed():

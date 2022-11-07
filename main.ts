@@ -5,7 +5,7 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
         maxNo += 1
     }
     
-    console.log("maxNo:" + ("" + ("" + maxNo)))
+    console.log("maxNo:" + ("" + maxNo))
     basic.showNumber(maxNo)
 })
 input.onGesture(Gesture.Shake, function on_gesture_shake() {
@@ -28,7 +28,7 @@ function showResult() {
         image.showImage(0)
     }
     basic.showNumber(random)
-    console.log("roll:" + ("" + ("" + random)))
+    console.log("roll:" + ("" + random))
     roll = false
 }
 
