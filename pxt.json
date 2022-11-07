@@ -1,5 +1,5 @@
 {
-    "name": "Dice",
+    "name": "dice",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -23,7 +23,7 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "pyprj",
+    "preferredEditor": "blocksprj",
     "yotta": {
         "config": {
             "microbit-dal": {
